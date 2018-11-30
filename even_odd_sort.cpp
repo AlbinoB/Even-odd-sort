@@ -98,3 +98,13 @@ void oddevensort(int *arr,int arrsize){
 
 }
 
+void compare_elements(int *arr,int j){
+    if(arr[j]>arr[j+1])
+			{
+			      int temp;
+			      temp=arr[j];
+			      arr[j]=arr[j+1];
+			      arr[j+1]=temp;
+			}
+}
+
