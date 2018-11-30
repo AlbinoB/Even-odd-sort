@@ -59,5 +59,42 @@ int main()
 			}
 		}
 
+void oddevensort(int *arr,int arrsize){
+    int temp,to_be_inserted,j,i=0;
+     int k;//if arraysize is odd we add one extra last pass in the for loop else
 
+             if(arrsize%2==0)
+            {
+                k=0;
+            }else
+            {
+                k=1;
+            }
+		for( i=0;i<arrsize/2+k;i++)
+        {
+             cout<<"before pass:"<<i+1<<"=>";
+            display(arr,arrsize);
+            for(int j=0;j<(arrsize/2)*2;)
+            {
+                compare_elements(arr,j);
+                j=j+2;
+            }
+             cout<<"\n     Even pass:";
+            display(arr,arrsize);
+
+
+            for(int j=1;j<((arrsize/2)*2);)
+            {
+                compare_elements(arr,j);
+                j=j+2;
+            }
+            cout<<"\n      odd pass:";
+            display(arr,arrsize);
+            cout<<"\n";
+            cout<<"\n";
+        }
+
+
+
+}
 
